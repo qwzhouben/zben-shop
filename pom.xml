@@ -7,6 +7,12 @@
   <groupId>com.zben</groupId>
   <artifactId>zben-shop</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <modules>
+    <module>shop-api</module>
+    <module>shop-eureka</module>
+    <module>shop-member-service</module>
+      <module>shop-common</module>
+  </modules>
   <packaging>pom</packaging>
 
   <name>zben-shop</name>
@@ -53,15 +59,15 @@
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
     <!-- springboot整合activemq -->
-    <dependency>
+   <!-- <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-activemq</artifactId>
-    </dependency>
+    </dependency>-->
     <!-- 集成发送邮件-->
-    <dependency>
+    <!--<dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-mail</artifactId>
-    </dependency>
+    </dependency>-->
     <!-- 集成mysql -->
     <dependency>
       <groupId>mysql</groupId>
