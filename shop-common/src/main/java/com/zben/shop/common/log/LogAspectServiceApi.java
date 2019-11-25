@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.alibaba.fastjson.JSONArray;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
@@ -25,7 +26,7 @@ public class LogAspectServiceApi {
 	private JSONObject jsonObject = new JSONObject();
 
 	// 申明一个切点 里面是 execution表达式
-	@Pointcut("execution(public * com.zben.shop.*.api.impl.*.*(..))")
+	@Pointcut("execution(public * com.zben.shop.*.service.impl.*.*(..))")
 	private void controllerAspect() {
 	}
 

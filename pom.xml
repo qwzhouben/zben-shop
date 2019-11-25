@@ -12,6 +12,7 @@
     <module>shop-eureka</module>
     <module>shop-member-service</module>
       <module>shop-common</module>
+      <module>shop-message-service</module>
   </modules>
   <packaging>pom</packaging>
 
@@ -59,15 +60,15 @@
       <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
     <!-- springboot整合activemq -->
-   <!-- <dependency>
+    <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-activemq</artifactId>
-    </dependency>-->
+    </dependency>
     <!-- 集成发送邮件-->
-    <!--<dependency>
+    <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-mail</artifactId>
-    </dependency>-->
+    </dependency>
     <!-- 集成mysql -->
     <dependency>
       <groupId>mysql</groupId>
