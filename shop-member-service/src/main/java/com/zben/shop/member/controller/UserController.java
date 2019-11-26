@@ -32,4 +32,14 @@ public class UserController implements UserApi {
         }
         return ResultResponse.setSuccess();
     }
+
+    @Override
+    public ResultResponse login(@RequestBody UserEntity userEntity) {
+        return userService.login(userEntity);
+    }
+
+    @Override
+    public ResultResponse getUser(String token) {
+        return userService.getUser(token);
+    }
 }

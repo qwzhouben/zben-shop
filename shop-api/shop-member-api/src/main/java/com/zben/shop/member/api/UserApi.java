@@ -2,9 +2,7 @@ package com.zben.shop.member.api;
 
 import com.zben.shop.common.ResultResponse;
 import com.zben.shop.member.entity.UserEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @DESC: 会员注册服务
@@ -14,6 +12,27 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/member")
 public interface UserApi {
 
+    /**
+     * 注册
+     * @param userEntity
+     * @return
+     */
     @PostMapping("/register")
     public ResultResponse register(@RequestBody UserEntity userEntity);
+
+    /**
+     * 登陆
+     * @param userEntity
+     * @return
+     */
+    @PostMapping("/login")
+    public ResultResponse login(@RequestBody UserEntity userEntity);
+
+    /**
+     * 根据token获取用户
+     * @param token
+     * @return
+     */
+    @GetMapping("/getUser")
+    public ResultResponse getUser(@RequestParam("token") String token);
 }

@@ -51,8 +51,12 @@ public class ResultResponse<T> {
         return new ResultResponse(code, msg);
     }
 
-    public ResultResponse setFail() {
+    public static ResultResponse setFail() {
         return setFail(Constant.HTTP_500, Constant.ERROR);
+    }
+
+    public static ResultResponse setFail(String msg) {
+        return setFail(Constant.HTTP_500, msg);
     }
 
 }
