@@ -18,7 +18,10 @@ public class ResultResponse<T> {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private T data;
 
-    private ResultResponse(Integer code, String msg, T data) {
+    public ResultResponse() {
+    }
+
+    public ResultResponse(Integer code, String msg, T data) {
         this.code = code;
         this.msg = msg;
         if (data != null) {
@@ -26,7 +29,7 @@ public class ResultResponse<T> {
         }
     }
 
-    private ResultResponse(Integer code, String msg) {
+    public ResultResponse(Integer code, String msg) {
         this.code = code;
         this.msg = msg;
     }

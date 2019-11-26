@@ -13,6 +13,7 @@
     <module>shop-member-service</module>
       <module>shop-common</module>
       <module>shop-message-service</module>
+      <module>shop-mobile-web</module>
   </modules>
   <packaging>pom</packaging>
 
