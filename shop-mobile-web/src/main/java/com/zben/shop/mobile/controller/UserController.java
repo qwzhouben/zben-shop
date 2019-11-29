@@ -50,7 +50,7 @@ public class UserController extends BaseController {
         } catch (Exception e) {
             setError(request,"注册失败", REGISTER);
         }
-        return LOGIN;
+        return "redirect:" + LOGIN;
     }
 
     @PostMapping("/login")
